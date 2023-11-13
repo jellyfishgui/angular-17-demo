@@ -1,0 +1,22 @@
+@if (hasLoggedIn) {
+  <h1>Username: {{ username }}</h1>
+}
+@else {
+  <h1>You have to sign in!</h1>
+}
+
+@switch (animal) {
+  @case ('DOG') {
+    <h1>It's a dog.</h1>
+  }
+
+  @case ('CAT') {
+    <h1>It's a cat.</h1>
+  }
+}
+
+<ul>
+  @for (student of studentsList; track $index) {
+    <li>No.{{$index + 1}} {{ student.name }}</li>
+  }
+</ul>
